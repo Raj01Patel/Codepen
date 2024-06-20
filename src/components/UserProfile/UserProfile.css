@@ -1,0 +1,146 @@
+.user-info {
+    align-content: center;
+    margin-left: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-info img {
+    height: 48px;
+    border-radius: 50%;
+}
+
+.user-name {
+    width: 45px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #10b981;
+    padding: 4px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    height: 48px;
+    margin-left: 10px;
+    /* Added for spacing when wrapping */
+}
+
+.option {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    background-color: rgb(64, 64, 64);
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 15px;
+    color: #fff;
+    background-color: rgba(35, 32, 32, 0.71);
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px 6px rgba(182, 159, 159, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    /* Added to ensure it appears above other content */
+}
+
+.menu.block {
+    display: none;
+}
+
+.menu-list {
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(183, 183, 183);
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.menu-list:hover {
+    background-color: rgb(142, 142, 142);
+    border-radius: 10px;
+    color: #202020;
+}
+
+.sign-out {
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(183, 183, 183);
+    text-align: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.sign-out:hover {
+    background-color: rgb(142, 142, 142);
+    border-radius: 10px;
+    color: #202020;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .user-info {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .option {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .menu {
+        width: 180px;
+        top: 120px;
+        right: 10px;
+    }
+
+    .menu-list {
+        font-size: 16px;
+    }
+
+    .sign-out {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-info {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .option {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .menu {
+        width: 160px;
+        top: 230px;
+        right: 100px;
+    }
+
+    .menu-list {
+        font-size: 15px;
+    }
+
+    .sign-out {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,21 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+}
+
+body{
+    background: #131417;
+}
+
+.spiner{
+    height: 100vh;
+    width: 100%;
+    border: 2px solid white;
+    align-content: center;
+}
+
+.spiner svg{
+    margin: auto;
+}

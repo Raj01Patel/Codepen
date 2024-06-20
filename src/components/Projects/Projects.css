@@ -1,0 +1,71 @@
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.user-profile {
+    align-items: center;
+    padding: 5px;
+}
+
+
+.user-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.user-initial {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #10b981;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.user-info3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 60px;
+}
+
+.user-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

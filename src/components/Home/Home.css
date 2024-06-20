@@ -1,0 +1,295 @@
+/* Base styles for the sidebar */
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftbar {
+    background-color: #212225;
+    height: 100vh;
+    width: 16%;
+    position: relative;
+    transition: width 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leftbar.closed {
+    width: 1%;
+}
+
+.toggle-sidebar {
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: -15px;
+    top: 20px;
+    text-align: center;
+    align-content: center;
+    background: transparent;
+}
+
+.icon {
+    transition: transform 0.3s ease-in-out;
+    color: #fff;
+    transform: rotate(180deg);
+}
+
+.icon:hover {
+    background-color: rgb(101, 101, 101);
+}
+
+.icon.rotate {
+    transform: rotate(-360deg);
+    margin-left: 5px;
+}
+
+.toggle-sidebar svg {
+    background-color: rgb(69, 65, 65);
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+/* Logo styles */
+.logo {
+    text-align: center;
+    padding: 15px 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.logo img {
+    height: 40px;
+    width: 190px;
+    color: white;
+}
+
+.logo.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Start button styles */
+.start-btn {
+    padding: 15px 15px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    --border-size: 0.2rem;
+    color: #fff;
+    cursor: pointer;
+    border-image: conic-gradient(from var(--angle),
+            #d53e33 0deg 90deg,
+            #fbb300 90deg 180deg,
+            #377af5 180deg 270deg,
+            #399953 270deg 360deg) 1 stretch;
+    background: rgb(0 0 0 / var(--opacity));
+}
+
+.start-btn.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@supports (background: paint(houdini)) {
+    @property --opacity {
+        syntax: "<number>";
+        initial-value: 0.5;
+        inherits: false;
+    }
+
+    @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+
+    @keyframes opacityChange {
+        to {
+            --opacity: 1;
+        }
+    }
+
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    .start-btn {
+        animation: rotate 4s linear infinite, opacityChange 3s infinite alternate;
+    }
+}
+
+/* Home button styles */
+.home-btn {
+    background-color: #000000;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    border: 2px solid #606060;
+}
+
+.home-btn.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.home-btn:hover {
+    border: none;
+}
+
+.home-btn svg {
+    margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .leftbar {
+        width: 20%;
+    }
+
+    .leftbar.closed {
+        width: 8%;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .start-btn,
+    .home-btn {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .leftbar {
+        width: 25%;
+    }
+
+    .leftbar.closed {
+        width: 10%;
+    }
+
+    .toggle-sidebar {
+        right: -10px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .start-btn,
+    .home-btn {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
+
+.rightbar {
+    width: 84%;
+    transition: width 0.3s ease-in-out;
+}
+
+.rightbar.expand {
+    width: 99%;
+}
+
+.search-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.search-input {
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color: #2d2c31;
+    border-radius: 10px;
+}
+
+.signup-btn {
+    align-content: center;
+    text-align: center;
+    margin-left: 25px;
+    padding: 10px;
+    height: 50px;
+    margin-top: 20px;
+    width: 140px;
+    background-color: #10b981;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background 0.3s, border 0.3s, color 0.3s;
+}
+
+.signup-btn:hover {
+    background: transparent;
+    border: 2px solid #10b981;
+    color: #10b981;
+}
+
+.search-input input {
+    background-color: #2d2c31;
+    width: 90%;
+    outline: none;
+    border: none;
+    height: 50px;
+    font-size: 17px;
+    color: rgb(214, 214, 214);
+    padding: 0px 10px;
+    font-weight: 600;
+}
+
+.user-card {
+    margin-top: 20px;
+    width: 100%;
+    max-height: 655px;
+    overflow-y: scroll;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .search-input {
+        width: 70%;
+        margin-left: 10px;
+    }
+
+    .signup-btn {
+        width: 120px;
+        padding: 8px;
+        margin-left: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-info{
+        display: flex;
+    }
+
+    .signup-btn {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 0.8em;
+    }
+}

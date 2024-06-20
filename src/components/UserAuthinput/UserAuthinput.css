@@ -1,0 +1,64 @@
+.user-auth {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    background-color: #1e1e1e;
+    padding: 0px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 17px;
+    color: #e3e2e2;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-wrapper.invalid {
+    border: 3px solid red;
+}
+
+.input-wrapper.board {
+    border: 2px solid red;
+}
+
+.input-icon {
+    margin-right: 10px;
+    color: #a1a0a0;
+}
+
+.auth-input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #000000;
+    font-size: 17px;
+    padding: 10px;
+}
+
+/* .auth-input::placeholder {
+    color: #000000;
+}
+
+.auth-input:focus::placeholder {
+    color: transparent;
+} */
+
+/* Add a smooth transition effect */
