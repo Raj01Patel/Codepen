@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import SplitPane from 'react-split-pane';
 import './NewProject.css';
 import SettingsIcon from '@mui/icons-material/Settings';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -358,62 +357,3 @@ const NewProject = () => {
 };
 
 export default NewProject;
-
-
-{/* <SplitPane split={splitDirection} minSize={100} className='code-container' >
-    <SplitPane split="vertical" minSize={100} >
-        <div style={{ borderRight: "1px solid grey" }}>
-            <div className='pane'>
-                <div className='left-side'>
-                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png' style={{ height: '30px' }} />
-                    <span>HTML</span>
-                </div>
-                <div className='pane1'>
-                    <SettingsIcon className='setting' onClick={ThemeList} />
-                    <KeyboardArrowDownIcon />
-                </div>
-            </div>
-            <div className='CodeMirror'>
-                <CodeMirror value={html} height={splitDirection === "vertical" ? "100vh" : "340px"} color='black' theme={themes[theme]} extensions={[javascript({ jsx: true })]} onChange={(value) => { setHtml(value) }} />
-            </div>
-        </div>
-
-        <div style={{ borderRight: "1px solid grey" }}>
-            <div className='pane'>
-                <div className='left-side'>
-                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png' style={{ height: '30px' }} />
-                    <span>CSS</span>
-                </div>
-                <div className='pane1'>
-                    <SettingsIcon className='setting' onClick={ThemeList} />
-                    <KeyboardArrowDownIcon />
-
-                </div>
-            </div>
-            <div className='CodeMirror'>
-                <CodeMirror value={css} height={splitDirection === "vertical" ? "100vh" : "340px"} color='black' theme={themes[theme]} extensions={[javascript({ jsx: true })]} onChange={(value, viewUpdate) => { setCss(value) }} />
-            </div>
-        </div>
-
-        <div style={{ borderRight: "1px solid grey" }}>
-            <div className='pane'>
-                <div className='left-side'>
-                    <img src='https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo.png' style={{ height: '30px' }} />
-                    <span>JS</span>
-                </div>
-                <div className='pane1'>
-                    <SettingsIcon className='setting' onClick={ThemeList} />
-                    <KeyboardArrowDownIcon />
-
-                </div>
-            </div>
-            <div className='CodeMirror'>
-                <CodeMirror value={js} height={splitDirection === "vertical" ? "100vh" : "340px"} color='black' theme={themes[theme]} extensions={[javascript({ jsx: true })]} onChange={(value, viewUpdate) => { setJs(value) }} />
-            </div>
-        </div>
-
-    </SplitPane>
-    <div className='bottom-pane'>
-        <iframe title='Result' srcDoc={output} style={{ border: "none", width: "100%", height: "100%" }} />
-    </div>
-</SplitPane> */}
