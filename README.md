@@ -3,7 +3,7 @@
 ### Welcome to the  CodePen Clone Website! This project is it allows you to write code in the browser, and see the results of it as you build. developed using React.Js & CSS. In this README, you'll find all the information about this project.
 ---
 
-## Hosted Link: [Click Here](https://code-pen-cllone.vercel.app/)
+## Hosted Link: [Click Here](https://codepen-cllone.vercel.app/)
 ---
 
 ## Table of Contents:-
