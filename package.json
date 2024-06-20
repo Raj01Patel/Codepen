@@ -29,7 +29,6 @@
     "react-redux": "^9.1.2",
     "react-resizable-panels": "^2.0.19",
     "react-router-dom": "^6.23.1",
-    "react-split-pane": "^0.1.92",
     "react-toastify": "^10.0.5",
     "uuid": "^10.0.0"
   },
